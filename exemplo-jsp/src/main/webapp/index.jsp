@@ -20,16 +20,16 @@
                         <input class="form-control" placeholder="Altura" name="altura" type="text">
                     </div>
                 </fieldset>
-            </form>
-            <form>
+            
                 <fieldset>
                     <div class="form-group">
                         <input class="form-control" placeholder="Peso" name="peso" type="text">
                     </div>
-                    <button class="btn btn-sm btn-success">Calcular</a>
+                    
                 </fieldset>
+              <button class="btn btn-sm btn-success">Calcular</a>    
             </form>
-
+            
         </div>
     </div>
     <!-- Scriptlet. Código Java no HTML. -->
@@ -38,20 +38,19 @@
       String pesoStr = request.getParameter("peso");
     
       if (alturaStr != null && pesoStr != null) {
+         float altura = Float.parseFloat(alturaStr);
          float peso = Float.parseFloat(pesoStr);
     %>
     <br>
-    <%   if (peso >= 18) { %> 
+     
     <p>
-      De maior! :)
+      Seu IMC e :
     </p>
-    <%   } else { %>
+    <% System.out.println(peso/(altura*altura));   %>
     <p>
-      De doido! :)
-    </p>
-    <%   }
-     } %> 
-    
+      Parabens!
+    </p> 
+    <% } %>
     
   </body>
 </html>
