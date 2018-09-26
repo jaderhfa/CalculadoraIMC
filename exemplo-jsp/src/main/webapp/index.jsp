@@ -46,7 +46,7 @@
     <p>
       Seu IMC e :
     </p>
-    <% System.out.println(peso/(altura*altura));   %>
+    <% out.println(peso/(altura*altura));   %>
     <p>
       Parabens!
     </p> 
